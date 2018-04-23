@@ -4,7 +4,7 @@ import * as actions from '../actions';
 
 
 // Map Redux state to component props (load states from store and map to props)
-mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     count: state.CountReducer.count,
     wish_value: state.CountReducer.wish_value
@@ -12,7 +12,7 @@ mapStateToProps = (state) => {
 }
 
 // Map Redux actions to component props (sends actions to reducers)
-mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onIncreaseClick: () => dispatch(actions.increaseTodo()),
     onUpdateClick: event => dispatch((
